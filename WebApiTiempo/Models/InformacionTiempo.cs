@@ -9,8 +9,8 @@ namespace WebApiTiempo.Models
     public class InformacionTiempo
     {
         [Key]
-        public string Municipio { get; set; }
-        public string Region { get; set; }
+        public string Id { get; set; }
+        public string Nombre { get; set; }
         public string Datos_ultima_hora { get; set; }
         public string Temperatura { get; set; }
         public string Humedad { get; set; }

@@ -46,7 +46,7 @@ namespace WebApiTiempo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInformacionTiempo(string id, InformacionTiempo informacionTiempo)
         {
-            if (id != informacionTiempo.Municipio)
+            if (id != informacionTiempo.Id)
             {
                 return BadRequest();
             }
@@ -84,7 +84,7 @@ namespace WebApiTiempo.Controllers
             }
             catch (DbUpdateException)
             {
-                if (InformacionTiempoExists(informacionTiempo.Municipio))
+                if (InformacionTiempoExists(informacionTiempo.Id))
                 {
                     return Conflict();
                 }
@@ -94,7 +94,7 @@ namespace WebApiTiempo.Controllers
                 }
             }
 
-            return CreatedAtAction("GetInformacionTiempo", new { id = informacionTiempo.Municipio }, informacionTiempo);
+            return CreatedAtAction("GetInformacionTiempo", new { id = informacionTiempo.Id }, informacionTiempo);
         }
 
         // DELETE: api/InformacionTiempoes/5
@@ -115,7 +115,7 @@ namespace WebApiTiempo.Controllers
 
         private bool InformacionTiempoExists(string id)
         {
-            return _context.TiempoItems.Any(e => e.Municipio == id);
+            return _context.TiempoItems.Any(e => e.Id == id);
         }
     }
 }

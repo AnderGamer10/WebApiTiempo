@@ -10,8 +10,8 @@ namespace WebApiTiempo.Migrations
                 name: "TiempoItems",
                 columns: table => new
                 {
-                    Municipio = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Region = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Datos_ultima_hora = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Humedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -22,7 +22,7 @@ namespace WebApiTiempo.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TiempoItems", x => x.Municipio);
+                    table.PrimaryKey("PK_TiempoItems", x => x.Id);
                 });
         }
 

@@ -9,7 +9,7 @@ using WebApiTiempo.Models;
 namespace WebApiTiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220119121536_InitialCreate")]
+    [Migration("20220124115422_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace WebApiTiempo.Migrations
 
             modelBuilder.Entity("WebApiTiempo.Models.InformacionTiempo", b =>
                 {
-                    b.Property<string>("Municipio")
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Datos_ultima_hora")
@@ -37,10 +37,10 @@ namespace WebApiTiempo.Migrations
                     b.Property<string>("Humedad")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Precipitacion_Acumulada")
+                    b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Region")
+                    b.Property<string>("Precipitacion_Acumulada")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Temperatura")
@@ -49,7 +49,7 @@ namespace WebApiTiempo.Migrations
                     b.Property<string>("Velocidad_Viento")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Municipio");
+                    b.HasKey("Id");
 
                     b.ToTable("TiempoItems");
                 });
