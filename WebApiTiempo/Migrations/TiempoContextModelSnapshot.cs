@@ -23,9 +23,6 @@ namespace WebApiTiempo.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Datos_ultima_hora")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("GpxX")
                         .HasColumnType("nvarchar(max)");
 

@@ -9,7 +9,7 @@ using WebApiTiempo.Models;
 namespace WebApiTiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220124115422_InitialCreate")]
+    [Migration("20220124123402_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,9 +24,6 @@ namespace WebApiTiempo.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Datos_ultima_hora")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GpxX")
                         .HasColumnType("nvarchar(max)");
