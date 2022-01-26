@@ -9,7 +9,7 @@ using WebApiTiempo.Models;
 namespace WebApiTiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220124123402_InitialCreate")]
+    [Migration("20220126093303_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
