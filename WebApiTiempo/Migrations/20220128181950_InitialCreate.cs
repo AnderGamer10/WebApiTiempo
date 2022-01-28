@@ -15,8 +15,8 @@ namespace WebApiTiempo.Migrations
                     Municipio = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Humedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Velocidad_Viento = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Precipitacion_Acumulada = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    VelocidadViento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrecipitacionAcumulada = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GpxX = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GpxY = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

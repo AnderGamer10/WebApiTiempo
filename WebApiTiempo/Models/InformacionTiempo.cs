@@ -14,8 +14,8 @@ namespace WebApiTiempo.Models
         public string Municipio { get; set; }
         public string Temperatura { get; set; }
         public string Humedad { get; set; }
-        public string Velocidad_Viento { get; set; }
-        public string Precipitacion_Acumulada { get; set; }
+        public string VelocidadViento { get; set; }
+        public string PrecipitacionAcumulada { get; set; }
         public string GpxX { get; set; }
         public string GpxY { get; set; }
     }
