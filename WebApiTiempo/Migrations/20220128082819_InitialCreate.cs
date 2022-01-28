@@ -12,6 +12,7 @@ namespace WebApiTiempo.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Municipio = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Humedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Velocidad_Viento = table.Column<string>(type: "nvarchar(max)", nullable: true),

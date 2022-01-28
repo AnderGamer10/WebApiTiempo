@@ -9,7 +9,7 @@ using WebApiTiempo.Models;
 namespace WebApiTiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220126093303_InitialCreate")]
+    [Migration("20220128082819_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace WebApiTiempo.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Humedad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Municipio")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")

@@ -32,6 +32,9 @@ namespace WebApiTiempo.Migrations
                     b.Property<string>("Humedad")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Municipio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
