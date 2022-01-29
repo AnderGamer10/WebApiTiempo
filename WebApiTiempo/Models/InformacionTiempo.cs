@@ -18,5 +18,6 @@ namespace WebApiTiempo.Models
         public string PrecipitacionAcumulada { get; set; }
         public string GpxX { get; set; }
         public string GpxY { get; set; }
+        public string TipoEstacion { get; set; }
     }
 }
