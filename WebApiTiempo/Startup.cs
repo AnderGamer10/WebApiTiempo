@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebApiTiempo.Models;
 using WebApiTiempo.Settings;
+using WebApiTiempo.Services;
+using WebApiTiempo.Middleware;
 
 namespace WebApiTiempo
 {
@@ -29,10 +31,17 @@ namespace WebApiTiempo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
+            // configure strongly typed settings object
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddControllers();
             services.AddDbContext<TiempoContext>(opt =>
                                               opt.UseSqlServer(Configuration.GetConnectionString("TiempoList")));
+
+            // configure DI for application services
+            services.AddScoped<IAuthService, AuthService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiTiempo", Version = "v1" });
@@ -87,7 +96,8 @@ namespace WebApiTiempo
 
             app.UseAuthorization();
 
-
+            // custom jwt auth middleware
+            app.UseMiddleware<JwtMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
