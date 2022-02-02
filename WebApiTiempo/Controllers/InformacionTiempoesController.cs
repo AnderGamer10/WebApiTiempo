@@ -21,6 +21,7 @@ namespace WebApiTiempo.Controllers
         }
 
         // GET: api/InformacionTiempoes
+        [Autohorrize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InformacionTiempo>>> GetTiempoItems()
         {
